@@ -1,0 +1,2 @@
+# stctest
+Тестовое задание на позицию «Fullstack Developer (Laravel/Vue)» ООО СТЦ
