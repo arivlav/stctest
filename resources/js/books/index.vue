@@ -9,6 +9,7 @@
                     <th scope="col">№ п/п</th>
                     <th scope="col">Название книги</th>
                     <th scope="col">Авторы</th>
+                    <th scope="col">Количество</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -16,6 +17,7 @@
                     <td>{{ index + 1 }}</td>
                     <td>{{ book.book_name }}</td>
                     <td>{{ book.authors_names }}</td>
+                    <td>{{ book.count_authors }}</td>
                 </tr>
                 </tbody>
             </table>

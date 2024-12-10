@@ -16,9 +16,10 @@ class BookAuthorModel extends Model
         $query = self::query()
             ->select([
                 "$tableName.book_id",
-                'books.name as book_name',
+                'books.name as book_name'
             ])
             ->selectRaw('GROUP_CONCAT(authors.name SEPARATOR \', \')  as authors_names')
+            ->selectRaw("count($tableName.book_id) as count_authors")
             ->whereRaw("$tableName.deleted_at is null")
             ->leftJoin('books', 'books.id_book', '=', "$tableName.book_id")
             ->leftJoin('authors', 'authors.id_author', '=', "$tableName.author_id")
